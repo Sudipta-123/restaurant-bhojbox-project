@@ -1,0 +1,71 @@
+.top_category
+{
+    border:0px solid black;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    
+
+}
+
+.top_category_product
+{
+    border:0px solid white;
+    height:285px;
+    width:315px;
+    float:left;
+    margin-top:20px;
+    margin-bottom: 20px;
+    transition: transform 1s;
+
+    
+    
+}
+.top_category_product:hover{
+    transform:scale(1.05);
+    box-shadow:2px 2px 2px 2px grey;
+}
+.title p{
+    text-align:center;
+}
+.btn
+{
+    border:0px solid green;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.btn input{
+    height:40px;
+    width:130px;
+    border-radius:7px;
+    border:0px;
+    background-color:orange;
+    font-size:20px;
+    color:blue;
+}
+.btn input:hover{
+    background-color:red;
+    color:white;
+}
+.title b{
+    color:green;
+    font-size:20px;
+}
+
+.Bakso a {
+        color:white; 
+        text-decoration: none; 
+    }
+
+.Bakso a:hover {
+        color: red; 
+    }
+
+    html,css{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    
+}

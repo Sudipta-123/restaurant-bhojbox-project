@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Golden Inn</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body> 
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">Menu</a>
+                <ul>
+                    <li><a href="vegthali.html">Veg</a></li>
+                    <li><a href="nonveg.html">Non-Veg</a></li>
+                    <li><a href="Chat.html">Chat</a></li>
+                    <li><a href="fast.html">Fastfood</a></li>
+                    <li><a href="pasta.html">Pasta</a></li>
+                </ul>
+            </li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+<br><br><br>
+<h1 align="center">Enter Your Order Details</h1>
+<br>
+
+<div>
+    <center>
+        <form id="orderForm">
+
+            <table border="0" width="60%">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name" placeholder="Enter your name"></td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" id="email" placeholder="Enter your Email"></td>
+                </tr>
+
+                <tr>  
+                    <td>Mobile:</td>
+                    <td><input type="text" id="mobile" placeholder="Enter your Phone-Number"></td>
+                </tr>
+
+                <tr>  
+                    <td>Item:</td>
+                    <td><input type="text" id="item" placeholder="What item you will purchase"></td>
+                </tr>
+
+                <tr>
+                    <td>Quantity:</td>
+                    <td><input type="text" id="quantity" placeholder="How much you will take"></td>
+                </tr>
+
+                <tr>  
+                    <td>Address:</td>
+                    <td><textarea id="address" placeholder="Enter your address"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><b>Payment Process:</b></td>
+                    <td>
+                        <!-- Main payment methods -->
+                        <div>
+                            <input type="radio" name="paymentMethod" id="upi" value="UPI">
+                            <label for="upi">UPI</label>
+                        </div>
+
+                        <!-- UPI sub options -->
+                        <div id="upiOptions" style="margin-left:20px; margin-top:5px; display:none;">
+                            <div>
+                                <input type="radio" name="upiApp" id="phonepe" value="PhonePe">
+                                <label for="phonepe">PhonePe</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="upiApp" id="gpay" value="GooglePay">
+                                <label for="gpay">Google Pay</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="upiApp" id="paytm" value="Paytm">
+                                <label for="paytm">Paytm</label>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <input type="radio" name="paymentMethod" id="cash" value="Cash on Delivery">
+                            <label for="cash">Cash on Delivery</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="paymentMethod" id="card" value="Card">
+                            <label for="card">Card</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Amount:</td>
+                    <td><input type="text" id="amount" placeholder="Enter amount"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Pay Now"></td>
+                </tr>
+            </table>
+
+        </form>
+    </center>
+</div>
+
+
+<div class="footer">
+    <div class="Bakso"> 
+        <b>Quick link</b>
+        <br><br><br>
+        <a href="index.html">Home</a><br>
+        <a href="About.html">About</a><br>
+        <a href="vegthali.html">Menu</a><br>
+        <a href="Order.html">Order</a><br>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="Bakso"> 
+        <b>Menu links</b>
+        <br><br><br>
+        <a href="vegthali.html">Veg Thala</a><br>
+        <a href="nonveg.html">Non-Veg Thala</a><br>
+        <a href="Chat.html">Chat Thala</a><br>
+        <a href="fast.html">Fast Food</a><br>
+        <a href="pasta.html">Pasta</a><br>
+    </div>
+
+    <div class="Bakso"> 
+        <b>Address</b>
+        <br><br><br>
+        Name: Sudipta Dey<br>
+        Place: Bhubaneswar,Odisha<br>
+        Email: Sudip@gmail.com<br>
+        Mobile: 9123455678<br>  
+        Time: 9:00 AM to 9:00 PM<br>
+    </div>
+
+    <div class="Bakso"> 
+        <b>Find Us</b>
+        <img src="https://www.google.com/maps/vt/data=XwSHFkWfd-lF8IZsja8pG9Zjp7FKo4nyOKcmSA7Lymg0oVhbbOrPIqKQmZ3d7UYKE9YJosUVo1Wqfu_HaKezFs0eo3f_pAgHX2ug-mv3jtUZWiiQaqRY43vbks25hKEJmj1amI-SmBFETBKAFeUmwVvgT2NKXFIyDWUbbOLUO6Q2v-dGayKTM4B0EAy01geaNvltXW6gCBdxd6DHOydrU4ICwI0yNu4zsx0piKf53Nyk9zArmGK0xpq8hEMJ9tdrFPwfBM8FllUomq7FOPe2I5H3AXN0IBs93SF8nhmTdMxpqWPXccgJkEg_3Do" width="100%">
+    </div>
+</div>
+
+
+<script>
+const upiRadio = document.getElementById("upi");
+const cashRadio = document.getElementById("cash");
+const cardRadio = document.getElementById("card");
+const upiOptions = document.getElementById("upiOptions");
+
+upiRadio.addEventListener("change", function () {
+    if (this.checked) upiOptions.style.display = "block";
+});
+cashRadio.addEventListener("change", function () {
+    upiOptions.style.display = "none";
+});
+cardRadio.addEventListener("change", function () {
+    upiOptions.style.display = "none";
+});
+
+document.getElementById("orderForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    let paymentType = "";
+    let upiApp = "";
+
+    if (upiRadio.checked) {
+        paymentType = "UPI";
+        if (document.getElementById("phonepe").checked) upiApp = "PhonePe";
+        else if (document.getElementById("gpay").checked) upiApp = "GooglePay";
+        else if (document.getElementById("paytm").checked) upiApp = "Paytm";
+    } else if (cashRadio.checked) {
+        paymentType = "Cash on Delivery";
+    } else if (cardRadio.checked) {
+        paymentType = "Card";
+    }
+
+    const data = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        mobile: document.getElementById("mobile").value.trim(),
+        item: document.getElementById("item").value.trim(),
+        quantity: document.getElementById("quantity").value.trim(),
+        address: document.getElementById("address").value.trim(),
+        paymentType: paymentType,
+        upiApp: upiApp,
+        amount: document.getElementById("amount").value.trim()
+    };
+
+    if (!data.name || !data.email || !data.mobile || !data.item || !data.quantity || !data.address || !data.paymentType || !data.amount) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    try {
+        const res = await fetch("http://localhost:5000/order", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (result.success) {
+            alert("We got your Order");
+            window.location.href = "pay.html";
+        } else {
+            alert("Order failed!");
+        }
+    } catch (err) {
+        alert("Server error!");
+        console.log(err);
+    }
+});
+</script>
+
+</body>
+</html>
+
+
+

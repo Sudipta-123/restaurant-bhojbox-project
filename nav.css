@@ -1,0 +1,49 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+#menu ul{
+    list-style:none;
+    z-index:1000;
+    position:fixed;
+}
+
+
+#menu ul li{
+    background-color:black;
+    border:1px solid white;
+    width:273px;
+    height:40px;       
+    text-align:center;
+    line-height:40px;
+    float:left;
+    position:relative;
+}
+#menu ul li a{
+    text-decoration:none;
+    color:white;
+    display:block;
+}
+#menu ul li a:hover{
+    background-color:red;
+}
+
+#menu ul ul{
+    display:none;
+    position:absolute;
+}
+#menu ul li:hover>ul{
+    display:block;
+}
+
+html,css{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    
+}
+
+
+

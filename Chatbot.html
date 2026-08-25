@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartBot</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: black;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: Arial, sans-serif;
+}
+
+.A{
+    width:1000px;
+    height:520px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:10px;
+    padding:20px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+}
+
+.A h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.B{
+    flex:1;
+    background:rgba(0,0,0,0.2);
+    overflow-y:auto;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:12px;
+    display:flex;
+    flex-direction:column;
+}
+
+.bot-message,
+.user-message{
+    padding:10px 14px;
+    border-radius:10px;
+    margin:6px 0;
+    width:fit-content;
+    max-width:75%;
+    line-height:1.4;
+    font-size:14px;
+}
+
+.bot-message{
+    background:#1e90ff;
+    color:#fff;
+    align-self:flex-start;
+}
+
+.user-message{
+    background:#00ff88;
+    color:#000;
+    align-self:flex-end;
+}
+
+.C{
+    display:flex;
+    gap:10px;
+}
+
+.C input{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+.C button{
+    padding:10px 20px;
+    background:#00ff88;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.C button:hover{
+    background:#00cc66;
+}
+
+.back{
+    position:absolute;
+    top:20px;
+    left:20px;
+    padding:8px 16px;
+    background:#e60000;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.3s;
+    border:0.5px solid white;
+    font-size:16px;
+}
+
+.back:hover{
+    background:#ff4d4d;
+    transform: scale(0.95);
+}
+</style>
+</head>
+
+
+
+<body>
+<button class="back" onclick="window.location.href='contact.html'">Back</button>
+
+<div class="A">
+    <h2>💬 BhojBox ChatBot</h2>
+
+    <div class="B" id="B">
+        <div class="bot-message">
+            Hello! 👋 I am your smart offline chatbot. How can I help you today?
+        </div>
+    </div>
+
+    <div class="C">
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button id="send">Send</button>
+    </div>
+</div>
+
+<script>
+const chatBox=document.getElementById("B");
+const userInput=document.getElementById("user-input");
+const sendBtn=document.getElementById("send");
+
+sendBtn.addEventListener("click",()=>{
+    const message=userInput.value.trim();
+    if(message==="")return;
+
+    showMessage(message,"user-message");
+    userInput.value="";
+
+    const reply=getBotReply(message);
+    setTimeout(()=>{
+        showMessage(reply,"bot-message");
+    },500);
+});
+
+userInput.addEventListener("keypress",(e)=>{
+    if(e.key==="Enter")sendBtn.click();
+});
+
+function showMessage(message,className){
+    const msgDiv=document.createElement("div");
+    msgDiv.className=className;
+    msgDiv.textContent=message;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop=chatBox.scrollHeight;
+}
+
+function getBotReply(input){
+input=input.toLowerCase();
+
+if(input.includes("hello")||input.includes("hi")||input.includes("hey")){
+return "Hello 👋 Welcome to My Golden Inn! How can I help you today?";
+}
+if(input.includes("thank")){
+return "You’re welcome 😊 Let me know if you need help choosing your food!";
+}
+if(input.includes("bye")||input.includes("goodbye")){
+return "Goodbye 👋 Hope to see you again soon!";
+}
+if(input.includes("menu")||input.includes("food")||input.includes("item")||input.includes("dish")||input.includes("list")){
+return "We offer Veg Thali, Non-Veg Thali, Fast Food, Pasta, Chat, Biryani, Chilli Paneer, Momo and more. Please check the Menu page for full details.";
+}
+if(input.includes("veg")){
+return "Yes, we have Veg Thali, Dal Roti, Fried Rice, Veg Biryani, Chilli Paneer, Pasta and more veg items.";
+}
+if(input.includes("non veg")||input.includes("non-veg")||input.includes("chicken")){
+return "Yes, we also serve non-veg items like Chicken Biryani and other special dishes.";
+}
+if(input.includes("best")||input.includes("popular")||input.includes("recommend")||input.includes("suggest")){
+return "Our most popular items are Biryani, Chilli Paneer, Momo and Pasta. If you want a full meal, Veg Thali is a great choice.";
+}
+if(input.includes("biryani")){
+return "Biryani is one of our best sellers and a great choice for a full meal.";
+}
+if(input.includes("momo")){
+return "Momo is a popular snack and perfect as a starter or light meal.";
+}
+if(input.includes("pasta")){
+return "Pasta is a tasty option if you want something light and filling.";
+}
+if(input.includes("paneer")){
+return "Chilli Paneer is one of our most loved veg dishes.";
+}
+if(input.includes("pizza")){
+return "Pizza is available in our fast food section. Please check the Menu page for variants and price.";
+}
+if(input.includes("price")||input.includes("cost")||input.includes("rate")||input.includes("how much")||input.includes("cheap")||input.includes("expensive")||input.includes("budget")){
+return "Prices depend on the item. You can see exact prices on the Menu page. Our items are affordable and value for money.";
+}
+if(input.includes("combo")||input.includes("offer")||input.includes("deal")||input.includes("discount")||input.includes("value")||input.includes("worth")){
+return "Our Veg Thali and Biryani combos are great value for money because they give good quantity at a reasonable price.";
+}
+if(input.includes("quantity")||input.includes("portion")||input.includes("enough")||input.includes("how much food")||input.includes("size")){
+return "Our portions are generous. One thali or one biryani is usually enough for one person.";
+}
+if(input.includes("spicy")||input.includes("chilli")||input.includes("hot")){
+return "You can ask for low, medium, or high spice level as per your taste.";
+}
+if(input.includes("taste")||input.includes("tasty")||input.includes("quality")||input.includes("fresh")){
+return "We focus on fresh ingredients and good taste to give you the best experience.";
+}
+if(input.includes("hygiene")||input.includes("clean")){
+return "We maintain proper hygiene and cleanliness in our kitchen and restaurant.";
+}
+if(input.includes("order")||input.includes("buy")||input.includes("purchase")||input.includes("place an order")||input.includes("order now")){
+return "You can place your order from the Order page by filling the form and clicking Submit.";
+}
+if(input.includes("delivery")||input.includes("deliver")||input.includes("home delivery")){
+return "Yes, we provide delivery within Bhubaneswar. Delivery time is usually 30 to 45 minutes.";
+}
+if(input.includes("pickup")||input.includes("takeaway")||input.includes("take away")){
+return "Yes, you can pick up or take away your order from our restaurant.";
+}
+if(input.includes("payment")||input.includes("pay")||input.includes("cash")||input.includes("upi")||input.includes("gpay")||input.includes("phonepe")||input.includes("online")){
+return "Currently, we accept cash payment. Online payment options may be added soon.";
+}
+if(input.includes("cancel")||input.includes("change order")||input.includes("refund")){
+return "For order changes or cancellation, please contact us directly at our phone number.";
+}
+if(input.includes("time")||input.includes("open")||input.includes("close")||input.includes("hours")||input.includes("today")){
+return "We are open from 9:00 AM to 9:00 PM every day.";
+}
+if(input.includes("address")||input.includes("location")||input.includes("where")||input.includes("located")||input.includes("map")){
+return "Our restaurant is located in Bhubaneswar, Odisha.";
+}
+if(input.includes("contact")||input.includes("phone")||input.includes("number")||input.includes("call")){
+return "You can contact us at: 9123455678";
+}
+if(input.includes("family")||input.includes("kids")||input.includes("child")){
+return "Yes, we have food options suitable for families and kids.";
+}
+if(input.includes("party")||input.includes("bulk")||input.includes("large order")||input.includes("group")){
+return "For party or bulk orders, please contact us in advance so we can serve you better.";
+}
+if(input.includes("wait")||input.includes("how long")||input.includes("time to deliver")){
+return "Delivery usually takes around 30 to 45 minutes depending on location and order size.";
+}
+if(input.includes("thali")){
+return "Our Thali is a complete meal with rice, roti, dal and sabji. It is a great value option.";
+}
+return "I can help you with menu, prices, combos, quantity, taste, orders, delivery, payment, timing, address, contact, and more. What would you like to know?";
+}
+</script>
+
+</body>
+</html>

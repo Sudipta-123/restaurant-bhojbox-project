@@ -1,0 +1,38 @@
+.footer
+{
+    height:200px;
+    width:100%;
+    border:2px solid black;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:black;
+    color:white;
+}
+.Bakso
+{
+    height:180px;
+    width:300px;
+    border:1px solid black;
+    float:left;
+    text-align:center;
+
+}
+
+
+.Bakso a {
+        color:white; 
+        text-decoration: none; 
+    }
+
+.Bakso a:hover {
+        color: red; 
+    }
+
+    html,css{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    
+}
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Golden Inn</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+       .get-touch-btn{
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgb(9, 9, 237);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius:5px;
+    transition: all 0.2s ease;
+}
+
+.get-touch-btn:hover{
+    background-color: #1a5eef;   
+    transform: scale(0.95);      
+}
+
+    </style>
+</head>
+<body> 
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#">Menu</a>
+                <ul>
+                    <li><a href="vegthali.html">Veg</a></li>
+                    <li><a href="nonveg.html">Non-Veg</a></li>
+                    <li><a href="Chat.html">Chat</a></li>
+                    <li><a href="fast.html">Fastfood</a></li>
+                    <li><a href="pasta.html">Pasta</a></li>
+                </ul>
+            </li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <br><br><br>
+
+    <!-- Simple link that looks like a button -->
+    <div style="text-align:center;">
+        <a href="chatbot.html" class="get-touch-btn">Chat with Us</a>
+    </div>
+
+    <br>
+
+    <div class="cot">
+        <div class="cot1">
+            <div>
+                <center>
+                    <form action="order_confirmation.html" method="POST" target="_blank">
+                        <table width="100%">
+                            <tr>
+                                <td width="20%">Name:</td>
+                                <td width="80%">Sudipta Dey</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>Sudip@gmail.com</td>
+                            </tr>
+                            <tr>  
+                                <td>Mobile:</td>
+                                <td>9123455678</td>
+                            </tr>
+                            <tr>  
+                                <td>Address:</td>
+                                <td>Bhubaneswar,Odisha</td>
+                            </tr>
+                             <tr>  
+                                <td>Open:</td>
+                                <td>9:00 AM - 9:00 PM</td>
+                            </tr>
+                             <tr>  
+                                <td>Delay:</td>
+                                <td>30-45 min depends upon situation</td>
+                            </tr>
+                             <tr>  
+                                <td>Category:</td>
+                                <td>Veg, non-veg, Chat, Fastfood, Pasta</td>
+                            </tr>
+                             <tr>  
+                                <td>Address:</td>
+                                <td>Bhubaneswar,Odisha</td>
+                            </tr>
+                             <tr>  
+                                <td>ESTD:</td>
+                                <td>Feb, 2024</td>
+                            </tr>
+                             <tr>  
+                                <td>Type:</td>
+                                <td>Family restaurant</td>
+                            </tr>
+                            
+                        </table>
+                    </form>
+                </center>
+            </div>
+        </div>
+
+        <div class="cot2"> 
+            <img src="Applogo.jpg" width="100%" height="419px">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="Bakso"> 
+            <b>Quick link</b>
+            <br><br><br>
+            <a href="index.html">Home</a><br>
+            <a href="About.html">About</a><br>
+            <a href="vegthali.html">Menu</a><br>
+            <a href="Order.html">Order</a><br>
+            <a href="Contact.html">Contact</a>
+        </div>
+        <div class="Bakso"> 
+            <b>Menu links</b>
+            <br><br><br>
+            <a href="vegthali.html">Veg Thala</a><br>
+            <a href="nonveg.html">Non-Veg Thala</a><br>
+            <a href="Chat.html">Chat Thala</a><br>
+            <a href="fast.html">Fast Food</a><br>
+            <a href="pasta.html">Pasta</a><br>
+        </div>
+        <div class="Bakso"> 
+            <b>Address</b>
+            <br><br><br>
+            Name: Sudipta Dey<br>
+            Place: Bhubaneswar,Odisha<br>
+            Email: Sudip@gmail.com<br>
+            Mobile: 9123455678<br>  
+            Time: 9:00 AM to 9:00 PM<br>
+        </div>
+        <div class="Bakso"> 
+            <b>Find Us</b>
+            <img src="https://www.google.com/maps/vt/data=XwSHFkWfd-lF8IZsja8pG9Zjp7FKo4nyOKcmSA7Lymg0oVhbbOrPIqKQmZ3d7UYKE9YJosUVo1Wqfu_HaKezFs0eo3f_pAgHX2ug-mv3jtUZWiiQaqRY43vbks25hKEJmj1amI-SmBFETBKAFeUmwVvgT2NKXFIyDWUbbOLUO6Q2v-dGayKTM4B0EAy01geaNvltXW6gCBdxd6DHOydrU4ICwI0yNu4zsx0piKf53Nyk9zArmGK0xpq8hEMJ9tdrFPwfBM8FllUomq7FOPe2I5H3AXN0IBs93SF8nhmTdMxpqWPXccgJkEg_3Do" width="100%">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            const inputs = this.querySelectorAll("input, textarea");
+            let allFilled = true;
+
+            const oldPopup = document.querySelector('.popup-warning');
+            if (oldPopup) oldPopup.remove();
+
+            for (let input of inputs) {
+                if (input.value.trim() === "") {
+                    allFilled = false;
+
+                    const popup = document.createElement('div');
+                    popup.className = 'popup-warning';
+                    popup.innerText = '⚠️ Please fill out this field.';
+
+                    const rect = input.getBoundingClientRect();
+                    popup.style.top = `${rect.top + window.scrollY - 40}px`;
+                    popup.style.left = `${rect.left + window.scrollX}px`;
+
+                    document.body.appendChild(popup);
+                    input.focus();
+
+                    setTimeout(() => popup.remove(), 3000);
+                    break;
+                }
+            }
+
+            if (allFilled) {
+                this.submit();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
